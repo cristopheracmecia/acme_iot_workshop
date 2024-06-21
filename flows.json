@@ -1,0 +1,1061 @@
+[
+    {
+        "id": "004a3f8b31cc88d0",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c7e9c13c40960d67",
+        "type": "tab",
+        "label": "Flujo 2",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2f0ef3daf5e73582",
+        "type": "tab",
+        "label": "Dashboard Temp 1",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "999cd5e37772ed7a",
+        "type": "tab",
+        "label": "Dashboard Owasys",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2884aabdeea7f283",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "soldier.cloudmqtt.com",
+        "port": "15258",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "958f0209428ac4f6",
+        "type": "ui-base",
+        "name": "Dashboard Monitorización",
+        "path": "/dashboard",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "default",
+        "titleBarStyle": "default"
+    },
+    {
+        "id": "52259ada7282c175",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "f2cfd99c29a0d565",
+        "type": "ui-group",
+        "name": "My Group",
+        "page": "8196ebed7da7020c",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "809d03d5b3215aa8",
+        "type": "ui-page",
+        "name": "Dashboard Prueba 1",
+        "ui": "958f0209428ac4f6",
+        "path": "/page3",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "52259ada7282c175",
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "70f51c0fa5f0ad53",
+        "type": "ui-group",
+        "name": "Temperatura en Lima",
+        "page": "809d03d5b3215aa8",
+        "width": "6",
+        "height": "4",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "b45457ee5eee4eaf",
+        "type": "ui-page",
+        "name": "Dashboard Owasys",
+        "ui": "958f0209428ac4f6",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "52259ada7282c175",
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "a5e344d562fc82c4",
+        "type": "ui-group",
+        "name": "Temperatura",
+        "page": "b45457ee5eee4eaf",
+        "width": "6",
+        "height": "5",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bb8861e57e89da8a",
+        "type": "ui-group",
+        "name": "Distancia",
+        "page": "b45457ee5eee4eaf",
+        "width": "6",
+        "height": "5",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "d1ea74c1d492316a",
+        "type": "ui-group",
+        "name": "Baliza",
+        "page": "b45457ee5eee4eaf",
+        "width": "6",
+        "height": "1",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "ae69cd08fd96dcbf",
+        "type": "debug",
+        "z": "004a3f8b31cc88d0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "bc41e7688956072c",
+        "type": "inject",
+        "z": "004a3f8b31cc88d0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hola mundo",
+        "payloadType": "str",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "ae69cd08fd96dcbf"
+            ]
+        ]
+    },
+    {
+        "id": "7a8cdd0d270a1b0c",
+        "type": "inject",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "55c01b3fa63b21a3"
+            ]
+        ]
+    },
+    {
+        "id": "55c01b3fa63b21a3",
+        "type": "http request",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://weather.acmecia.com/temperature/Lima",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 100,
+        "wires": [
+            [
+                "425225c71cb63015"
+            ]
+        ]
+    },
+    {
+        "id": "425225c71cb63015",
+        "type": "json",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 300,
+        "wires": [
+            [
+                "7f36685b71053ff8"
+            ]
+        ]
+    },
+    {
+        "id": "7f36685b71053ff8",
+        "type": "switch",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "property": "payload.temperature",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "t": "lte",
+                "v": "20",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 300,
+        "wires": [
+            [
+                "d2f13582d4400921"
+            ],
+            [
+                "d04313ca2d0e282a"
+            ]
+        ]
+    },
+    {
+        "id": "d2f13582d4400921",
+        "type": "change",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Es un día moderado",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "eecc4802a715c7ed"
+            ]
+        ]
+    },
+    {
+        "id": "d04313ca2d0e282a",
+        "type": "change",
+        "z": "c7e9c13c40960d67",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Es un día frío",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 380,
+        "wires": [
+            [
+                "d215370d556e62a4"
+            ]
+        ]
+    },
+    {
+        "id": "eecc4802a715c7ed",
+        "type": "debug",
+        "z": "c7e9c13c40960d67",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d215370d556e62a4",
+        "type": "debug",
+        "z": "c7e9c13c40960d67",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e9a3a63301fb75b1",
+        "type": "inject",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "1183cff9671efde2"
+            ]
+        ]
+    },
+    {
+        "id": "1183cff9671efde2",
+        "type": "http request",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://weather.acmecia.com/temperature/Lima",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "4b354c14cf9316b5"
+            ]
+        ]
+    },
+    {
+        "id": "f08c78d9a1c27261",
+        "type": "debug",
+        "z": "2f0ef3daf5e73582",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4b354c14cf9316b5",
+        "type": "json",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 180,
+        "wires": [
+            [
+                "f08c78d9a1c27261",
+                "d699f548e66934c9",
+                "b0c49b15445778a9"
+            ]
+        ]
+    },
+    {
+        "id": "c9543d1bf7da1ebb",
+        "type": "ui-gauge",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "group": "70f51c0fa5f0ad53",
+        "order": 2,
+        "width": "6",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "gauge",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "40",
+                "color": "#ffc800"
+            },
+            {
+                "from": "70",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 490,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d699f548e66934c9",
+        "type": "change",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "c9543d1bf7da1ebb",
+                "88941f2d57893d3b"
+            ]
+        ]
+    },
+    {
+        "id": "88941f2d57893d3b",
+        "type": "ui-text",
+        "z": "2f0ef3daf5e73582",
+        "group": "70f51c0fa5f0ad53",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 490,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "df1a75a3c4677379",
+        "type": "ui-text",
+        "z": "2f0ef3daf5e73582",
+        "group": "70f51c0fa5f0ad53",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 550,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b0c49b15445778a9",
+        "type": "change",
+        "z": "2f0ef3daf5e73582",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.message",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "df1a75a3c4677379"
+            ]
+        ]
+    },
+    {
+        "id": "61763bacd1ae53ea",
+        "type": "ui-text",
+        "z": "999cd5e37772ed7a",
+        "group": "a5e344d562fc82c4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Lectura °C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 870,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "c19b57f4a5fa54bc",
+        "type": "ui-gauge",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "group": "a5e344d562fc82c4",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Sensor de temperatura",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c"
+            },
+            {
+                "from": "20",
+                "color": "#ffc800"
+            },
+            {
+                "from": "30",
+                "color": "#ea5353"
+            }
+        ],
+        "min": 0,
+        "max": "50",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 900,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "3ff211414720e087",
+        "type": "ui-gauge",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "group": "bb8861e57e89da8a",
+        "order": 1,
+        "width": "6",
+        "height": "4",
+        "gtype": "gauge-tile",
+        "gstyle": "needle",
+        "title": "Sensor de distancia",
+        "units": "units",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353"
+            },
+            {
+                "from": "9",
+                "color": "#ffc800"
+            },
+            {
+                "from": "15",
+                "color": "#5cd65c"
+            }
+        ],
+        "min": 0,
+        "max": "18",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 910,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5d2f5cf941a54902",
+        "type": "ui-text",
+        "z": "999cd5e37772ed7a",
+        "group": "bb8861e57e89da8a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Distancia (metros)",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "className": "",
+        "x": 910,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "9e603ce243f03a34",
+        "type": "mqtt out",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "topic": "led_on",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2884aabdeea7f283",
+        "x": 590,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "185c2f0d135fbc93",
+        "type": "mqtt out",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "topic": "led_off",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2884aabdeea7f283",
+        "x": 590,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "33868cbd7fca47d8",
+        "type": "ui-button",
+        "z": "999cd5e37772ed7a",
+        "group": "d1ea74c1d492316a",
+        "name": "",
+        "label": "Encender",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "lightbulb-on",
+        "iconPosition": "left",
+        "payload": "0001",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "9e603ce243f03a34"
+            ]
+        ]
+    },
+    {
+        "id": "cd837afd780c472e",
+        "type": "ui-button",
+        "z": "999cd5e37772ed7a",
+        "group": "d1ea74c1d492316a",
+        "name": "",
+        "label": "Apagar",
+        "order": 1,
+        "width": "3",
+        "height": "1",
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "lightbulb-off",
+        "iconPosition": "left",
+        "payload": "0000",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "185c2f0d135fbc93"
+            ]
+        ]
+    },
+    {
+        "id": "ea2bd2d2f36a616f",
+        "type": "mqtt in",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "topic": "data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2884aabdeea7f283",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 680,
+        "wires": [
+            [
+                "43c3ec6b4f32774e",
+                "d8f77e742369e4bd"
+            ]
+        ]
+    },
+    {
+        "id": "43c3ec6b4f32774e",
+        "type": "switch",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "property": "payload.port5",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 620,
+        "wires": [
+            [
+                "069984b310051f51"
+            ]
+        ]
+    },
+    {
+        "id": "069984b310051f51",
+        "type": "switch",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "property": "payload.port5.data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 620,
+        "wires": [
+            [
+                "7f9411db247e3128"
+            ]
+        ]
+    },
+    {
+        "id": "7f9411db247e3128",
+        "type": "change",
+        "z": "999cd5e37772ed7a",
+        "name": "ObtenerDistancia",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.port5.data.distance",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 620,
+        "wires": [
+            [
+                "4809b32631dfded6"
+            ]
+        ]
+    },
+    {
+        "id": "d8f77e742369e4bd",
+        "type": "switch",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "property": "payload.port7",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 270,
+        "y": 700,
+        "wires": [
+            [
+                "6c780adaa3e343e1"
+            ]
+        ]
+    },
+    {
+        "id": "6c780adaa3e343e1",
+        "type": "switch",
+        "z": "999cd5e37772ed7a",
+        "name": "",
+        "property": "payload.port7.data",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 450,
+        "y": 700,
+        "wires": [
+            [
+                "ad3c7d67ad42cbfa"
+            ]
+        ]
+    },
+    {
+        "id": "ad3c7d67ad42cbfa",
+        "type": "change",
+        "z": "999cd5e37772ed7a",
+        "name": "ObtenerTemperatura",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.port7.data.temperature",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 700,
+        "wires": [
+            [
+                "c19b57f4a5fa54bc",
+                "61763bacd1ae53ea"
+            ]
+        ]
+    },
+    {
+        "id": "4809b32631dfded6",
+        "type": "function",
+        "z": "999cd5e37772ed7a",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload / 1000\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 520,
+        "wires": [
+            [
+                "3ff211414720e087",
+                "5d2f5cf941a54902"
+            ]
+        ]
+    }
+]
